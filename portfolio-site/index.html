@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playpen+Sans:wght@100..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+    <script src="functions.js"></script>
+  </head>
+
+  <body>
+    <button class="sideBarBtn"></button>
+    <div class="sideBar">
+      <div class="sideBarContactInfo">
+        <button class="closeBtn"></button>
+        <a class="sideBarPhone" href="tel:+306955628527">+30 695 562 8527</a>
+        <a class="sideBarMail" href="https://www.linkedin.com/in/alexander-miraka/" target="_blank">linkedin.com/in/alexander miraka/</a>
+        <a class="sideBarLinkedIn" href="mailto:alexandermrk98@gmail.com">alexandermrk98@gmail.com</a>
+        <a class="sideBarGithub" href="https://github.com/AlexanderMiraka"
+        target="_blank">github.com/AlexanderMiraka</a>
+      </div>
+      <div class="sideBarNav">
+        <button id="aboutBtn" class="aboutBtn">About</button>
+        <button id="workBtn" class="workBtn">Work Experience</button>
+        <button id="personalProjectsBtn" class="personalProjectsBtn">Personal Projects</button>
+      </div>
+    </div>
+    <div class="personalInfo" id="personalInfo">
+      <h2 id="animationTarget">Hi, My Name Is</h2>
+      <h2>Alexander Miraka</h2>
+      <h3 class="bio">
+        Front End Developer with 2 years of experience building scalable,
+        responsive web applications in enterprise environments. Engaged in
+        developing pixel perfect, accessible, and performance optimized
+        interfaces. <br />
+        Proven ability to collaborate with cross-functional teams and deliver
+        solutions for high profile clients across multiple international markets
+      </h3>
+      <button class="personalInfoButton primaryButton" id="personalInfoButton">
+        Get to Know me
+      </button>
+    </div>
+    <div class="workExperience" id="workExperience">
+      <div class="workExperienceHeader">
+        <h1 class="workExperienceTitle">Work Experience</h1>
+        <button
+          class="personalProjectsButton primaryButton"
+          id="personalProjectsButton"
+        >
+          Dive Into Personal Projects
+        </button>
+      </div>
+      <div class="workFields">
+        <div class="workFieldsContent">
+          <h2>IT</h2>
+          <h3>Hellenic Army</h3>
+          <p>November 2024 - August 2025</p>
+        </div>
+        <div class="workFieldsContent">
+          <h2>Front End Developer</h2>
+          <h3>Deloitte Crete, Greece</h3>
+          <p>June 2022 - March 2024</p>
+        </div>
+        <div class="workFieldsContent">
+          <h2>Front End Developer | Intern</h2>
+          <h3>StartTech Ventures, Greece</h3>
+          <p>June 2020 - September 2020</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="workFieldsInfo">
+        <div class="workFieldsInfoContent">
+          <h4>
+            Helping with basic IT problems while cooperating to provide robust
+            solutions
+          </h4>
+        </div>
+        <div class="workFieldsInfoContent">
+          <h4>
+            Built and maintained responsive front end components using Vue 3,
+            SCSS, and CMS platforms (CoreMedia, Salesforce Commerce Cloud)
+          </h4>
+          <h4>
+            Translated UX/UI designs from Figma and Adobe XD into reusable,
+            production ready components
+          </h4>
+          <h4>
+            Collaborated closely with clients and agile teams to resolve tickets
+            via Jira and Octane, ensuring timely delivery of high quality
+            solutions
+          </h4>
+          <h4>
+            Gained hands on experience in modern workflows, including Git based
+            version control and agile sprint cycles
+          </h4>
+        </div>
+        <div class="workFieldsInfoContent">
+          <h4>
+            Supported development of science training.io web application by
+            implementing responsive layouts and reusable components
+          </h4>
+          <h4>
+            Gained hands on experience in modern workflows, including Git based
+            version control and agile sprint cycles
+          </h4>
+        </div>
+      </div>
+      <div class="educationCerts">
+        <div class="educationCertsHeader">
+          <h1 class="workExperienceTitle">Education and Certifications</h1>
+        </div>
+        <div class="educationCertsContent">
+          <div class="education">
+            <p>
+              BSc, Computer Science University of Crete, Heraklion, Greece
+              <span>2016-2022</span>
+            </p>
+          </div>
+          <div class="certifications">
+            <p>FreeCodeCamp: Responsive Web Design - <span>2020</span></p>
+            <p>Udemy: Vue.js & Vuex Fundamentals - <span>2024</span></p>
+            <p>FuturEd AI Hackathon - Participant - <span>2025</span></p>
+            <p>
+              Project Future, powered by ReGeneration, Finalist -
+              <span>2026</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="personalProjects" id="personalProjects">
+      <h1 class="personalProjectsTitle">My Personal Projects</h1>
+      <div class="slidesCarousel">
+        <div class="slidesWrapper">
+          <div class="slides">
+            <h4>Rosemary</h4>
+            <h6>
+              Web application for chefs. Introducing a safe hub for the masters
+              of culinary arts where they can explore, communicate and offer
+              their precious knowledge.
+            </h6>
+            <div class="technologiesUsed">
+              <p>#Typescript</p>
+              <p>#Angular V.20</p>
+              <p>#Scss</p>
+              <p>#Nest.js</p>
+              <p>#PostgreSQL</p>
+            </div>
+          </div>
+          <div class="slides">
+            <h4>Thundergrade AI grading tool</h4>
+            <h6>
+              An intelligent grading tool designed for educators. Professors can
+              automatically assess student work, with or without using their own
+              grading guidelines, gather their grades and streamline feedback.
+            </h6>
+            <div class="technologiesUsed">
+              <p>#Typescript</p>
+              <p>#Vue.js (3.0)</p>
+              <p>#Scss</p>
+              <p>#Nest.js</p>
+            </div>
+          </div>
+          <div class="slides">
+            <h4>SlapSticker</h4>
+            <h6>
+              A lightweight camera app that lets users apply filters and
+              stickers in real time. Capture photos, customize them creatively,
+              and download or view results instantly.
+            </h6>
+            <div class="technologiesUsed">
+              <p>#Javascript (ES5+)</p>
+              <p>#React</p>
+              <p>#Scss</p>
+            </div>
+          </div>
+          <div class="slides">
+            <h4>Find your coach</h4>
+            <h6>
+              Tutorial web application that lets you register as a coach, find
+              athletes and even match athletes with coaches
+            </h6>
+            <div class="technologiesUsed">
+              <p>#Vue.js</p>
+              <p>#CSS</p>
+            </div>
+          </div>
+          <div class="slides">
+            <h4>Monster Slayer</h4>
+            <h6>A minigame that lets you kill monsters</h6>
+            <div class="technologiesUsed">
+              <p>#HTML</p>
+              <p>#CSS</p>
+              <p>#Javascript (ES5+)</p>
+            </div>
+          </div>
+          <div class="slides">
+            <h4>Advanced CSS</h4>
+            <h6>
+              A Project that demonstrates advanced CSS and CSS preprocessors
+            </h6>
+            <div class="technologiesUsed">
+              <p>#HTML</p>
+              <p>#CSS</p>
+              <p>#Scss</p>
+            </div>
+          </div>
+        </div>
+        <button class="slidesNext"></button>
+        <button class="slidesPrev"></button>
+      </div>
+      <a
+        href="https://github.com/AlexanderMiraka"
+        target="_blank"
+        class="primaryButton"
+        >Find me on</a
+      >
+    </div>
+  </body>
+</html>

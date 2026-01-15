@@ -1,0 +1,801 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap);
+  @import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Story+Script&display=swap);
+}
+.navigation {
+  display: none;
+}
+.personalInfo {
+  height: 100dvh;
+  background: center no-repeat url(./images/personal_info_bg.jpg);
+  background-size: cover;
+  font-family: "Nunito Sans", sans-serif;
+  color: #fff;
+  padding-left: 15%;
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media only screen and (max-width:1024px) {
+    padding: 0 64px;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+.personalInfoButton {
+  @media only screen and (max-width:1024px) {
+    margin-top: 16px;
+  }
+}
+#animationTarget {
+  color: #fff;
+  font-family: "Playpen Sans", sans-serif;
+  transition: all 1s ease-in-out;
+  @media only screen and (max-width:1024px) {
+    margin-top: 25%;
+  }
+}
+.fade-out {
+  opacity: 0;
+  transition: all ease-in-out 2s;
+}
+.personalInfo h2 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 38px;
+  @media only screen and (max-width:1024px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.bio {
+  width: 50%;
+  margin: 0;
+  @media only screen and (max-width:1024px) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+.primaryButton {
+  width: fit-content;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: 32px;
+  color: #fff;
+  padding: 0 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  transition: all 0.5s ease-in-out;
+  @media only screen and (max-width:1024px) {
+    height: 32px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.primaryButton:hover {
+  @media only screen and (min-width:1025px) {
+    background-color: #fff;
+    color: #000;
+    transform: scale(120%);
+  }
+}
+.primaryButton:active {
+  transition: none;
+  transform: translateY(2px);
+}
+.workExperience {
+  background: center no-repeat url(./images/work_xp_bg.jpg);
+  background-size: cover;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr .5fr;
+  align-items: center;
+  position: relative;
+  @media  only screen and (max-width: 1024px) {
+    overflow-x: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr .1fr 1fr 1fr;
+  }
+}
+.educationCerts {
+  grid-column: 1/-1;
+  @media  only screen and (max-width: 1024px) {
+    grid-column: unset;
+    grid-row: none;
+    margin-bottom: 8px;
+    padding-left: 32px;
+  }
+}
+.workFields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+  margin-left: 200px;
+  @media  only screen and (max-width: 1024px) {
+    margin: 64px 32px 0;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+  }
+}
+.workFieldsContent {
+  transition: all 1s ease-in-out;
+}
+.workFieldsContent p {
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+.workFieldsContent:hover {
+  @media  only screen and (min-width: 1025px) {
+    transform: scale(120%);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.workFieldsContent:hover p {
+  opacity: 1;
+}
+.workFieldsContent:last-of-type {
+  @media only screen and (max-width:1024px) {
+    margin-bottom: 8px;
+  }
+}
+.workFields h3,
+.workFields p,
+.workFields h2 {
+  margin: 0;
+}
+.workFields h2 {
+  font-weight: 700;
+  @media only screen and (max-width:1024px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+.workFields h3,
+.workFields p {
+  font-weight: 400;
+  @media only screen and (max-width:1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.divider {
+  width: 60dvh;
+  height: 0.5px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: rotate(90deg);
+  border-radius: 4px;
+  @media  only screen and (max-width: 1024px) {
+    transform: none;
+    width: 80vw;
+    align-self: center;
+    justify-self: center;
+    height: 2px;
+  }
+}
+.workFieldsInfo {
+  position: relative;
+  height: fit-content;
+  @media  only screen and (max-width: 1024px) {
+    height: 100%;
+  }
+}
+.workFieldsInfoContent {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -25%);
+  opacity: 0;
+  transition: all ease-in-out 1s;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media  only screen and (max-width: 1024px) {
+    left: 32px;
+    top: 8px;
+    transform: none;
+    gap: 4px;
+    padding-right: 8px;
+  }
+}
+.workFieldsInfoContent h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  @media  only screen and (max-width: 1024px) {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+}
+.fade-in {
+  opacity: 1;
+}
+.workExperienceHeader {
+  position: absolute;
+  top: 16px;
+  left: 25%;
+  transform: translate(-25%, 0%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  @media only screen and (max-width:1024px) {
+    left: 0;
+    transform: none;
+    justify-content: space-evenly;
+  }
+}
+.personalProjectsButton {
+  border: none;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+  transition: all 1s ease-in-out;
+  -webkit-animation: heartbeat 6s ease-in-out infinite both;
+  animation: heartbeat 6s ease-in-out infinite both;
+  @media only screen and (max-width:1024px) {
+    animation: none;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    height: 24px;
+  }
+}
+.personalProjectsButton:hover {
+  @media only screen and (min-width:1025px) {
+  animation: none;
+  transform: scale(105%);
+  background-color: transparent;
+  color: #fff;
+  }
+}
+.personalProjectsButton::after {
+  @media only screen and (min-width:1025px) {
+  content: "";
+  display: block;
+  position: relative;
+  background: url(./images/chevron_right.svg) center no-repeat;
+  background-size: cover;
+  height: 16px;
+  width: 16px;
+  transition: all 1s ease-in-out;
+  }
+}
+.personalProjectsButton:hover::after {
+  @media only screen and (min-width:1025px) {
+  transform: translateX(5px) rotate(360deg);
+  }
+}
+.workExperienceTitle {
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+  @media only screen and (max-width:1024px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.educationCertsHeader {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+  @media  only screen and (max-width: 1024px) {
+    position: relative;
+    justify-self: baseline;
+  }
+}
+.educationCertsContent {
+  display: flex;
+  gap: 16px;
+  justify-content: space-evenly;
+  align-items: center;
+  @media only screen and (max-width:1024px) {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+}
+.education p, .certifications p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  margin: 0;
+  @media only screen and (max-width:1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.education span, .certifications span {
+  font-weight: 100;
+  font-size: 14px;
+  line-height: 21px;
+  @media only screen and (max-width:1024px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+.personalProjects {
+  height: 100dvh;
+  background:
+    radial-gradient(1200px at 20% 10%, rgba(255, 255, 255, 0.02), transparent 65%),
+    linear-gradient(160deg, rgba(10, 10, 10, 0.9), rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.9));
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.personalProjectsTitle {
+  position: absolute;
+  top: 8px;
+  left: 64px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  font-family: "Nunito Sans", sans-serif;
+  @media only screen and (max-width:1024px) {
+    font-size: 16px;
+    line-height: 24px;
+    top: 16px;
+    left: 32px;
+    margin: 0;
+  }
+}
+.personalProjects .primaryButton {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  font-family: "Nunito Sans", sans-serif;
+  display: inline-flex;
+  font-size: 18px;
+  line-height: 22px;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  @media only screen and (max-width:1024px) {
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.personalProjects .primaryButton::after {
+  content: '';
+  background: url(./images/github-mark-white.svg) center no-repeat;
+  width: 18px;
+  height: 18px;
+  display: block;
+  position: relative;
+  background-size: cover;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:1024px) {
+    filter: invert(1);
+  }
+}
+.personalProjects .primaryButton:hover::after {
+  filter: invert(1);
+}
+.slides {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 50vw;
+  height: 70dvh;
+  justify-content: space-evenly;
+  @media only screen and (max-width:1024px) {
+    width: 80vw;
+  }
+}
+.slides::before {
+  background: url(./images/projects_background.jpg) center no-repeat;
+  content: "";
+  position: absolute;
+  background-size: cover;
+  filter: blur(10px);
+  width: 50vw;
+  height: 100%;
+  @media only screen and (max-width:1024px) {
+    width: 80vw;
+  }
+}
+.slides h4, .slides h6, .slides p {
+  z-index: 2;
+}
+.slides h4 {
+  margin: 0;
+  padding-left: 64px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  font-family: "Playpen Sans", sans-serif;
+  @media only screen and (max-width:1024px) {
+    font-size: 22px;
+    line-height: 28px;
+    padding: 0 16px 0 32px;
+  }
+
+}
+.slides h6 {
+  margin: 0;
+  padding: 0 64px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  font-family: "Nunito Sans", sans-serif;
+  @media only screen and (max-width:1024px) {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 32px;
+  }
+}
+.technologiesUsed {
+  padding: 0 64px;
+  display: flex;
+  gap: 16px;
+  @media only screen and (max-width:1024px) {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 32px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+.technologiesUsed p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: underline;
+}
+.slidesCarousel {
+  width: calc(50vw - 1px);
+  height: 70dvh;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 20px;
+  @media only screen and (max-width:1024px) {
+    width: calc(80vw - 1px);
+  }
+}
+.slidesWrapper {
+  display: inline-flex;
+  left: -50vw;
+  position: absolute;
+  @media only screen and (max-width:1024px) {
+    left: -80vw;
+  }
+}
+.slidesNext,.slidesPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  z-index: 6;
+}
+.slidesNext::after {
+  background: url(./images/slider_arrow_right.svg) center no-repeat;
+}
+.slidesPrev::after {
+  background: url(./images/slider_arrow_left.svg) center no-repeat;
+}
+.slidesPrev::after, .slidesNext::after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-size: 40px;
+} 
+.slidesNext {
+  right: 0;
+}
+.slidesPrev:hover {
+  @media only screen and (min-width:1025px) {
+    transform: translate(-4px, -50%);
+  }
+}
+.slidesNext:hover {
+  @media only screen and (min-width:1025px) {
+    transform: translate(4px, -50%);
+  }
+}
+.slidesNext:active {
+  @media only screen and (min-width:1025px) {
+    transform: translate(4px, -75%);
+  }
+}
+.slidesPrev:active {
+  @media only screen and (min-width:1025px) {
+    transform: translate(-4px, -75%);
+  }
+}
+.smooth {
+  transition: all .5s ease-in-out;
+} 
+.sideBarBtn {
+  background: transparent;
+  position: fixed;
+  left: 8px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+  transition: all .5s ease-in-out;
+  @media only screen and (max-width:1024px) {
+    top: 32px;
+  }
+  
+}
+.sideBarBtn::after {
+  content: '';
+  display: block;
+  position: relative;
+  background: url(./images/sidebar_menu.svg) center no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+}
+.sideBar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 25vw;
+  height: 100dvh;
+  z-index: 11;
+  background:
+    radial-gradient(1200px at 20% 10%, rgba(255, 255, 255, 0.02), transparent 65%),
+    linear-gradient(160deg, rgba(10, 10, 10, 0.9), rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.9));
+  backdrop-filter: blur(4px);
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all .5s ease-in-out;
+  display: flex;
+  transform: translateX(-100%);
+  @media only screen and (max-width:1024px) {
+    width: 80vw;
+  }
+}
+.sideBarContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @media only screen and (max-width:1024px) {
+    gap: 16px;
+  }
+}
+.sideBarContactInfo a {
+  color: #fff;
+  margin: 0;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: -0.02rem;
+  font-weight: 500;
+  padding-left: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  @media only screen and (max-width:1024px) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.sideBarContactInfo a:first-of-type {
+  margin-top: 32px;
+  @media only screen and (max-width:1024px) {
+    margin-top: 16px;
+  }
+}
+.sideBarPhone, .sideBarMail, .sideBarLinkedIn, .sideBarGithub {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.sideBarPhone::before {
+  background: url(./images/sideBarMobile.svg) center no-repeat;
+}
+.sideBarMail::before {
+  background: url(./images/sideBarMail.svg) center no-repeat;
+}
+.sideBarLinkedIn::before {
+  background: url(./images/sideBarLinkedIn.svg) center no-repeat;
+  filter: invert(1);
+}
+.sideBarGithub::before {
+  filter: invert(1);
+  background: url(./images/sideBarGithub.svg) center no-repeat;
+}
+.sideBarPhone::before, .sideBarMail::before, .sideBarLinkedIn::before, .sideBarGithub::before {
+  content: '';
+  display: block;
+  position: relative;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  @media only screen and (max-width:1024px) {
+    width: 14px;
+    height: 14px;
+  }
+}
+.closeBtn {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  height: 32px;
+  width: 32px;
+  margin-right: 16px;
+  @media only screen and (max-width:1024px) {
+    height: 14px;
+    width: 14px;
+  }
+}
+.closeBtn::after {
+  display: block;
+  content: '';
+  position: relative;
+  background: url(./images/sideBarClose.svg) center no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  @media only screen and (max-width:1024px) {
+    height: 20px;
+    width: 20px;
+  }
+}
+.sideBarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding: 0 64px;
+  @media only screen and (max-width:1024px) {
+    margin-bottom: 64px;
+    padding: 0 16px;
+  }
+}
+.sideBarNav button {
+background:
+    radial-gradient(1200px at 20% 10%, rgba(236, 236, 236, 0.02), transparent 65%),
+    linear-gradient(160deg, rgba(34, 34, 34, 0.9), rgba(15, 15, 15, 0.88), rgba(14, 14, 14, 0.9));
+    color: #fff;
+    font-family: "Nunito Sans", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 0.02rem;
+    font-weight: 300;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    @media only screen and (max-width:1024px) {
+    line-height: 16px;
+    font-size: 12px;
+    width: fit-content;
+    padding: 0 32px;
+  }
+}
+.sideBarNav button:hover {
+  @media only screen and (min-width:1025px) {
+      background: radial-gradient(1200px at 20% 10%, rgba(206, 206, 206, 0.02), transparent 65%),
+        linear-gradient(160deg, rgba(34, 34, 34, 0.9), rgba(59, 59, 59, 0.88), rgba(78, 78, 78, 0.9));
+        ;
+  }
+}
+.sideBarNav button:active {
+  transform: translateY(4px);
+}
+.open {
+  transform: translateX(0%);
+}
+.dotsContainer {
+  display: flex;
+  gap: 2px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: #b4b4b4;
+  border-radius: 100%;
+  transition: all .2s ease-in-out;
+}
+.dotActive {
+  background-color: #fefefe;
+}
