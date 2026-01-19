@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   navigateButton('aboutBtn','personalInfo');
   navigateButton('workBtn','workExperience');
   navigateButton('personalProjectsBtn','personalProjects');
+  animatePersonalXp();
 });
 
 function changeTextAnimation() {
@@ -148,5 +149,24 @@ function openNavBar() {
     }
   });
 }
+
+function animatePersonalXp() {
+  if(window.innerWidth < 1025) {
+    const animationTarget = document.querySelectorAll('.workFieldsContent');
+    const options = {
+      threshold:0.9,
+      rootMargin: '-50px 0px'
+    }
+    const intersection = new IntersectionObserver((intersectionEntries)=>{
+      intersectionEntries.forEach((entry)=>{
+        if(entry.isIntersecting && !entry.target.classList.contains('waveAnimation')) {
+          entry.target.classList.add('waveAnimation');
+        }
+      });
+    },options);
+    animationTarget.forEach((target)=>{
+      intersection.observe(target);
+    });
+  }
+}
 // TODO: 1) Add touchmove carousel,
-// TODO: 2) Add intersection observer on XP
